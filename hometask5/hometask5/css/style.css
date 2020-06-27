@@ -70,12 +70,3 @@ header {
     text-align: center;
     color: #fff;
 }
-.circle {
-   width: 80px;
-   height: 80px;
-   background-color: rgb(46, 146, 0);
-   display: block;
-   margin-top: 10px;
-   border-radius: 100%;
-   margin-left: 15px;
-}

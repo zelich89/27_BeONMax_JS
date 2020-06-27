@@ -67,14 +67,14 @@ let appDate = {
     },
     chooseIncum: function() {
             let items = prompt("Что принёсет дополнительный доход (через запятую)", "444,111,666,222,555");
-            
+            appDate.income = items.split(",");
+            appDate.income.push(prompt("Может ещё что-то?", "777"));
+            appDate.income.sort();
+
             if ((typeof (q)) !== 'string' || a == '' || (typeof (q)) == null) {
                 console.log("Упс");
             }
             else {
-                appDate.income = items.split(",");
-                appDate.income.push(prompt("Может ещё что-то?", "777"));
-                appDate.income.sort();
             }
     }
 };

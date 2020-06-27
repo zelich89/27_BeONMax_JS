@@ -1,34 +1,26 @@
-let menu = document.querySelector('.menu'),
+// 'use strict';
+
+let menu = document.getElementsByClassName('menu')[0],
+    menuItem = document.getElementsByClassName("menu-item"),
     title = document.getElementById('title'),
     text = document.getElementById('prompt'),
-    column = document.getElementsByClassName('.column'),
-    circle = document.getElementsByClassName('circle'),
-    adv = document.querySelector('.adv'),
-    wrapper = document.querySelector('.wrapper');
+/**/column = document.getElementsByClassName('.column'),
+    adv = document.getElementsByClassName('adv')[0],
+    li = document.createElement('li');
 
-let li = document.createElement('li');
+menu.insertBefore(menuItem[2], menuItem[1]);                    // Поменяли местами два элемента
 
-li.classList.add('menu-item');
-
+li.classList.add('menu-item');                                  // Добавляем новый li, с классом и текстом
+li.textContent = 'Пятый пункт';
 menu.appendChild(li);
 
-menuItem = document.getElementsByTagName('li');
+document.body.style.background= 'url(img/apple_true.jpg) center no-repeat'; // Меняем фон
+// document.body.style.backgroundImage = "url('img/apple_true.jpg')";  
 
-menuItem[4].innerHTML = 'Пятый пункт';
+title.textContent = 'Мы продаем только подлинную технику Apple';   // Заменить текст
 
-console.log(menuItem[4]);
+adv.remove();                                                      // Удалить рекламу
 
-document.body.style.background= 'url(img/apple_true.jpg) center no-repeat';
-
-title.textContent = 'Мы продаем только подлинную технику Apple';
-
-console.log(adv);
-
-column[0].removeChild(circle[1]);
-// document.body.removeChild(circle[1]);
-
-
-let question = 'Ваше отношение к техниике Apple- Хорошее';
-// let question = prompt('Ваше отношение к техниике Apple', 'Хорошее');
-
+let question = 'Ваше отношение к техниике Apple- Не особо';              // Отношение к Apple
+// let question = prompt('Ваше отношение к техниике Apple', 'Не особо');
 text.textContent = question;
